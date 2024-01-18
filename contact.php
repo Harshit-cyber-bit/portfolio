@@ -1,39 +1,26 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['body'];
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $subject = $_POST["subject"];
+    $body = $_POST["body"];
 
-    // Validate data (you may want to add more validation)
-    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
-        die("All fields are required.");
+    // Validate data (you can add more validation as needed)
+
+    if (empty($name) || empty($email) || empty($subject) || empty($body)) {
+        echo "Please fill in all fields.";
+        exit;
     }
 
-    // Set the recipient email address
-    $to = "21harsh12@gmail.com";
+    // Send email
+    $to = "your-email@example.com"; // replace with your email address
+    $headers = "From: $email";
+    $message = "Name: $name\nEmail: $email\nSubject: $subject\n\n$body";
 
-    // Set email headers
-    $headers = "From: $name <$email>\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
+    mail($to, $subject, $message, $headers);
 
-    // Compose the email message
-    $email_message = "Subject: $subject\n\n";
-    $email_message .= "From: $name\n";
-    $email_message .= "Email: $email\n\n";
-    $email_message .= "Message:\n$message";
-
-    // Send the email
-    if (mail($to, $subject, $email_message, $headers)) {
-        echo "Your message has been sent successfully.";
-    } else {
-        echo "Sorry, there was an error sending your message. Please try again later.";
-    }
+    echo "Message sent successfully!";
 } else {
-    // If the form is not submitted via POST, redirect to the form page
-    header("Location: index.html");
-    exit();
+    echo "Invalid request.";
 }
 ?>

@@ -501,21 +501,21 @@
         <div class="contact-header-caption"> <span class="color"> Get</span> In Touch.</div></div>
         <div class="contact-content">
             <!--Contact form-->
-             <div class="contact-form">
-                 <div class="form-header">
-                     Message Me
-                 </div>
-                 <form id="myForm" action="contact.php" method="post">
+            <div class="contact-form">
+                <div class="form-header">
+                    Message Me
+                </div>
+                <form id="myForm" action="contact.php" method="post">
                     <div class="input-line">
-                        <input  id="name" type="text" placeholder="Name" class="input-name">
-                        <input id="email" type="email" placeholder="Email"  class="input-name">
+                        <input name="name" id="name" type="text" placeholder="Name" class="input-name">
+                        <input name="email" id="email" type="email" placeholder="Email" class="input-name">
                     </div>
-                    <input type="text" id="subject" placeholder="subject" class="input-subject">
-                    <textarea id ="body" class="input-textarea" placeholder="message"></textarea>
-                    <button type="submit" id ="submit" value="send">Submit</button>
-                 </form>
-               
-             </div>
+                    <input name="subject" type="text" id="subject" placeholder="Subject" class="input-subject">
+                    <textarea name="body" id="body" class="input-textarea" placeholder="Message"></textarea>
+                    <button type="submit" id="submit" value="send">Submit</button>
+                </form>
+            </div>
+            
             <!--Contact form-->
             <!--Contact information-->
              <div class="contact-info">
