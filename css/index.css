@@ -398,26 +398,27 @@ body{
     transform: scale(1.1);
 }
 #breaker{
-    height: 100vh;
-    width: 200%;
+    height: 300vh;
+    width: 120%;
     background-color: #c70039;
     opacity: 1;
-    animation: breakeranimate 2s linear;
+    animation: breakeranimate 1.5s linear;
     display: none;
     transition: all .4s ease;
-    border-radius: 5px;
     z-index: 10;
+    transform: rotate(15deg);
     position: fixed;
+    transform : translateY(-100%);
 }
 @keyframes breakeranimate{
-   0%{ transform : translateX(-100%)}
-   50%{ transform : translateX(0%) }
-   100%{ transform : translateX(100%) }
+   0%{ transform : translateX(-150%) rotate(15deg)  translateY(-50%);}
+   50%{ transform : translateX(0%) rotate(15deg)  translateY(-50%);}
+   100%{ transform : translateX(150%) rotate(15deg)  translateY(-50%);}
 }
 @-webkit-keyframes breakeranimate{
-    0%{ transform : translateX(-100%) }
-    50%{ transform : translateX(0%) }
-    100%{ transform : translateX(100%) }
+    0%{ transform : translateX(-150%) rotate(15deg)  translateY(-50%);}
+    50%{ transform : translateX(0%) rotate(15deg)  translateY(-50%);}
+    100%{ transform : translateX(150%) rotate(15deg)  translateY(-50%);}
 }
 .color{
     color: #c70039;
@@ -1423,26 +1424,28 @@ For devices with smaller width like mobile phone
         display: none;
     }
     #breaker{
-        height: 50vh;
+        height: 300vh;
         width: 200%;
         background-color: #c70039;
         opacity: 1;
-        animation: breakeranimate 2s linear;
+        animation: breakeranimate 3s linear;
         display: none;
-        transition: all .4s ease;
         z-index: 10;
+        transform: rotate(15deg);
         position: fixed;
+        transform : translateY(-100%);
     }
     @keyframes breakeranimate{
-       0%{ transform : translateX(-100%)}
-       50%{ transform : translateX(0%) }
-       100%{ transform : translateX(100%) }
+       0%{ transform : translateX(-150%) rotate(15deg)  translateY(-50%);}
+       50%{ transform : translateX(0%) rotate(15deg)  translateY(-50%);}
+       100%{ transform : translateX(150%) rotate(15deg)  translateY(-50%);}
     }
     @-webkit-keyframes breakeranimate{
-        0%{ transform : translateX(-100%) }
-        50%{ transform : translateX(0%) }
-        100%{ transform : translateX(100%) }
+        0%{ transform : translateX(-150%) rotate(15deg)  translateY(-50%);}
+        50%{ transform : translateX(0%) rotate(15deg)  translateY(-50%);}
+        100%{ transform : translateX(150%) rotate(15deg)  translateY(-50%);}
     }
+
     .header-content-box{
         z-index: 2;
         text-align: center;
@@ -1878,25 +1881,25 @@ for tabs and large phones
         display: none;
     }
     #breaker{
-        height: 50vh;
-        width: 200%;
-        background-color: #c70039;
+        height: 300vh;
+        width: 120%;
         opacity: 1;
         animation: breakeranimate 2s linear;
         display: none;
-        transition: all .4s ease;
         z-index: 10;
+        transform: rotate(15deg);
         position: fixed;
+        transform : translateY(-100%);
     }
     @keyframes breakeranimate{
-       0%{ transform : translateX(-100%)}
-       50%{ transform : translateX(0%) }
-       100%{ transform : translateX(100%) }
+       0%{ transform : translateX(-150%) rotate(15deg)  translateY(-50%);}
+       50%{ transform : translateX(0%) rotate(15deg)  translateY(-50%);}
+       100%{ transform : translateX(150%) rotate(15deg)  translateY(-50%);}
     }
     @-webkit-keyframes breakeranimate{
-        0%{ transform : translateX(-100%) }
-        50%{ transform : translateX(0%) }
-        100%{ transform : translateX(100%) }
+        0%{ transform : translateX(-150%) rotate(15deg)  translateY(-50%);}
+        50%{ transform : translateX(0%) rotate(15deg)  translateY(-50%);}
+        100%{ transform : translateX(150%) rotate(15deg)  translateY(-50%);}
     }
     .header-content-box{
         z-index: 2;
