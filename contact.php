@@ -5,15 +5,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = $_POST["subject"];
     $body = $_POST["body"];
 
-    // Validate data (you can add more validation as needed)
 
     if (empty($name) || empty($email) || empty($subject) || empty($body)) {
         echo "Please fill in all fields.";
         exit;
     }
 
-    // Send email
-    $to = "your-email@example.com"; // replace with your email address
+    $to = "21harsh12@gmail.com";
     $headers = "From: $email";
     $message = "Name: $name\nEmail: $email\nSubject: $subject\n\n$body";
 
