@@ -488,11 +488,8 @@ body{
     opacity: 1;
     margin-bottom: 5px;
     padding-top: 2rem;
-
-
     display: block;
-    
-    margin-right: 2rem;  
+    /* margin-right: 2rem;   */
 }
 .about-second-line{
     opacity: .8;
@@ -537,7 +534,7 @@ body{
     color: #c70039;
     transition: all .4s ease;
 }
-.cv {
+/* .cv {
     margin-top: 50px;
     margin-left: 900px;
     margin-bottom: 30px;
@@ -545,14 +542,12 @@ body{
     
     justify-content: center;
     background-color: #c70039;
-    /* color: #c70039; */
-}
-.cv a button{
+    color: #c70039;
+} */
+/* .cv a button{
     background: transparent;
     justify-content: center;
     border:none;
-    /* padding: 15px 30px; */
-    padding-right: 100px;
     color: whitesmoke;
     background: #c70039;
     outline: none;
@@ -564,11 +559,60 @@ body{
     position: relative;
     transition: all .4s ease;
 
-}
-.cv a button:hover{
+} */
+/* .cv a button:hover{
     opacity: 1;
     transform: scale(1.05);
+} */
+
+.cv button{
+    font-size: 16px;
+    opacity: .8;
+    font-family: poppins;
+    font-weight: 200;
+    padding: 10px 20px;
+    background:transparent;
+    color:#c70039;
+    transition: all .4s ease;
+    outline: none;
+    margin: 20px;
+    border: 1.5px solid #c70039;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all .4s ease;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
+.cv button::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 200%;
+    transform: rotate(-15deg) translateY(-20px);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #c70039;
+    transition: all .7s ease;
+}
+.cv button:hover{
+    opacity: 1;
+    color:whitesmoke;
+    background: #c70039;
+}
+ button:hover .index{
+     position: relative;
+    z-index: 4;
+}
+.cv button:hover::before{
+    opacity: 1;
+    width: 120%;
+}
+.button{
+    text-align: center;
+}
+
 #services{
     position: relative;
 }
@@ -1008,8 +1052,6 @@ padding-bottom: 40px;
 .resume-content{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 100px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -1424,6 +1466,27 @@ For devices with smaller width like mobile phone
 
 
 @media only screen and (max-width: 550px){
+    #resume{
+        background: #101010;
+        display: none;
+        color:whitesmoke;
+        width: 100%;
+        height: auto;
+    }
+    .resume-content{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .resume{
+        height: 420px;
+        width: 40%;
+        margin: 20px;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+    }
     .header-content{
         height: 100vh;
         width: 100%;
@@ -1884,6 +1947,28 @@ for tabs and large phones
 
 
 @media all and (max-width: 1025px) and (min-width: 551px){
+    #resume{
+        background: #101010;
+        display: none;
+        color:whitesmoke;
+        width: 100%;
+        height: auto;
+    }
+    .resume-content{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .resume{
+        height: 420px;
+        width: 40%;
+        margin: 20px;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+    }
+    
     .header-content{
         height: 100vh;
         width: 100%;
@@ -2015,20 +2100,6 @@ for tabs and large phones
         padding-top: 10px;
         border-radius: 40px;
     }
-    .cv a button{
-        border:none;
-        padding: 20px 30px;
-        color: whitesmoke;
-        outline: none;
-        font-size:20px;
-        font-family: aileron;
-        border-radius: 8px;
-        font-weight: 400;
-        cursor: pointer;
-        position: relative;
-        transition: all .4s ease;
-    
-    }
     .service{
         height:auto;
         width:45%;
@@ -2130,14 +2201,6 @@ for tabs and large phones
                 transition: all .4s ease;
             }
             .blogs{
-                height: auto;
-                width: 75%;
-                margin: 10px;
-                margin-top: 20px;
-                margin-bottom: 20px;
-                position: relative;
-            }
-            .resume{
                 height: auto;
                 width: 75%;
                 margin: 10px;
@@ -2351,6 +2414,27 @@ for tabs and large phones
 
 
 @media all and (max-width: 9000px) and (min-width: 1441px){
+    #resume{
+        background: #101010;
+        display: none;
+        color:whitesmoke;
+        width: 100%;
+        height: auto;
+    }
+    .resume-content{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .resume{
+        height: 420px;
+        width: 40%;
+        margin: 20px;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+    }
 
     .portfolio-image img{
         height: 500px;
@@ -2388,21 +2472,7 @@ for tabs and large phones
         font-size: 28px;
         font-weight: 200;
     }
-    .cv a button{
-        background: transparent;
-        border:none;
-        padding: 25px 35px;
-        color: whitesmoke;
-        outline: none;
-        font-size:30px;
-        font-family: aileron;
-        border-radius: 4px;
-        font-weight: 400;
-        cursor: pointer;
-        position: relative;
-        transition: all .4s ease;
     
-    }
     .service{
         height:400px;
         width:28%;
