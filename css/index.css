@@ -538,18 +538,21 @@ body{
     transition: all .4s ease;
 }
 .cv {
-    padding-top: 0px;
+    margin-top: 50px;
     margin-left: 900px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     margin-right: 900px;
+    
     justify-content: center;
-    /* background-color: #c70039; */
+    background-color: #c70039;
     /* color: #c70039; */
 }
 .cv a button{
     background: transparent;
+    justify-content: center;
     border:none;
-    padding: 15px 30px;
+    /* padding: 15px 30px; */
+    padding-right: 100px;
     color: whitesmoke;
     background: #c70039;
     outline: none;
@@ -2127,6 +2130,14 @@ for tabs and large phones
                 transition: all .4s ease;
             }
             .blogs{
+                height: auto;
+                width: 75%;
+                margin: 10px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                position: relative;
+            }
+            .resume{
                 height: auto;
                 width: 75%;
                 margin: 10px;
